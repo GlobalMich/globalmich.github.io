@@ -4,5 +4,15 @@ body {
 
 header ul {
 	list-style-type: none;
+}
+
+header ul li {
+	cursor: pointer;
 	display: inline;
+	font-stretch: 700;
+	color: white;
+}
+
+header img {
+	height: 50px;
 }

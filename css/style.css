@@ -6,7 +6,7 @@ header ul {
 	list-style-type: none;
 }
 
-header ul li {
+header ul li, .player ul li {
 	cursor: pointer;
 	display: inline;
 	font-stretch: 700;
@@ -15,4 +15,8 @@ header ul li {
 
 header img {
 	height: 50px;
+}
+
+#pre, #next {
+	cursor: pointer;
 }

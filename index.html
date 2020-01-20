@@ -58,8 +58,73 @@
 </aside>
 <main>
 	<article>Создаем новый проект на html5</article>
+	<script>
+    $(document).ready(function(){
+    var video_count=0;
+    var video=$("#videoframe");
+    var currentplay=$("#currentplay");
+    var controls = {
+      pre:$("#pre"),
+      next:$("#next")
+    }
+    var playlist = [
+        [0, "Amv_1", "http://globalmich.ddns.net/elements/video/amv1.mp4"],
+        [1, "Amv_2", "http://globalmich.ddns.net/elements/video/amv2.mp4"],
+        [2, "Amv_3", "http://globalmich.ddns.net/elements/video/amv3.mp4"]
+    ];
+    currentplay.text(playlist[video_count][1]);
+    video[0].addEventListener("ended", function() {
+      if (video_count==playlist.length-1) {video_count=0}
+      else {video_count++}
+      video[0].src=playlist[video_count][2];
+      currentplay.text(playlist[video_count][1]);
+      video[0].play();
+    });
+    controls.pre.click(function() {
+      if (video_count==0) {video_count=playlist.length-1}
+      else {video_count--}
+      video[0].src=playlist[video_count][2];
+      currentplay.text(playlist[video_count][1]);
+      video[0].play();
+    });
+    controls.next.click(function() {
+      if (video_count==playlist.length-1) {video_count=0}
+      else {video_count++}
+      video[0].src=playlist[video_count][2];
+      currentplay.text(playlist[video_count][1]);
+      video[0].play();
+    });
+    play_item = function(id) {
+      video_count=id-1;
+      video[0].src=playlist[video_count][2];
+      currentplay.text(playlist[video_count][1]);
+      video[0].play();
+    } 
+  });
+</script>
+	<div class="player">
+		<span id="pre">◀</span>
+		<span id="currentplay"></span>
+		<span id="next">▶</span>
+		<br>
+		<video
+		    id="videoframe"
+		    controls
+		    preload="auto"
+		    poster="http://globalmich.ddns.net/elements/img/58.jpg"
+		    src="http://globalmich.ddns.net/elements/video/amv1.mp4" 
+		    width="640"
+		    hight="480">
+		</video>
+		<ul>
+		   <li onclick="play_item(1)">1st</li>
+		   <li onclick="play_item(2)">2nd</li>
+		   <li onclick="play_item(3)">3st</li>
+		</ul> 
+	</div>	
 </main>
 <footer>
 	<p>copyright 2020 </p>
 </footer>
+
 </body>

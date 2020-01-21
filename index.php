@@ -20,7 +20,7 @@ else if ( $_SESSION['id'] and file_exists('auth/'.$page.'.php')) {
 else if ( file_exists('guest/'.$page.'.php')) {
 	include 'guest/'.$page.'.php';
 }
-else include '404.html';
+else include 'all/404.html';
 
-include 'page.html';
+include 'all/page.html';
 ?>

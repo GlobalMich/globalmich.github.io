@@ -1,5 +1,19 @@
+
+		//global variabels
+		var playlist = [
+		[0, "Amv_1", "Коллекция#", "Пишем плеер", "http://globalmich.ddns.net/elements/video/amv1.mp4",
+		"img/player/amv1_512.png", "img/player/amv1_384.png", "img/player/amv1_256.png",
+		"img/player/amv1_192.png", "img/player/amv1_128.png", "img/player/amv1_96.png"],
+		[1, "Amv_2", "Коллекция$", "Пишем плеер", "http://globalmich.ddns.net/elements/video/amv2.mp4",
+		"img/player/amv2_512.png", "img/player/amv2_384.png", "img/player/amv2_256.png",
+		"img/player/amv2_192.png", "img/player/amv2_128.png", "img/player/amv2_96.png"],
+		[2, "Amv_3", "Коллекция%", "Пишем плеер", "http://globalmich.ddns.net/elements/video/amv3.mp4",
+		"img/player/amv3_512.png", "img/player/amv3_384.png", "img/player/amv3_256.png",
+		"img/player/amv3_192.png", "img/player/amv3_128.png", "img/player/amv3_96.png"]
+		];
+		var video_count=0;
+
 		// Start listin player
-		
 		$(document).ready(function(){
 			var video=$("#videoframe");
 			var currentplay=$("#currentplay");

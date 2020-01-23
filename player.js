@@ -1,4 +1,4 @@
-
+import 'jquery.js';
 		//global variabels
 		var playlist = [
 		[0, "Amv_1", "Коллекция#", "Пишем плеер", "http://globalmich.ddns.net/elements/video/amv1.mp4",
@@ -26,7 +26,7 @@
 			video[0].addEventListener("ended", function() {
 				if (video_count==playlist.length-1) {video_count=0}
 					else {video_count++}
-						video[0].src=playlist[video_count][4];
+					video[0].src=playlist[video_count][4];
 					currentplay.text(playlist[video_count][1]);
 					video[0].play();
 					navigator.mediaSession.metadata = new MediaMetadata({
@@ -50,6 +50,7 @@
 				currentplay.text(playlist[video_count][1]);
 				video[0].play();
 			} 
+
 			play_next = function() {
 				if (video_count==playlist.length-1) {video_count=0}
 					else {video_count++}

@@ -1,4 +1,4 @@
-import 'jquery.js';
+
 		//global variabels
 		var playlist = [
 		[0, "Amv_1", "Коллекция#", "Пишем плеер", "http://globalmich.ddns.net/elements/video/amv1.mp4",
@@ -15,11 +15,11 @@ import 'jquery.js';
 
 		// Start listin player
 		$(document).ready(function(){
-			var video=$("#videoframe");
-			var currentplay=$("#currentplay");
+			var video= getelementbyid("videoframe");
+			var currentplay=getelementbyid("currentplay");
 			var controls = {
-				pre:$("#pre"),
-				next:$("#next")
+				pre:getelementbyid("pre"),
+				next:getelementbyid("next")
 			}
 
 			currentplay.text(playlist[video_count][1]);

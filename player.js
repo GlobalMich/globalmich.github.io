@@ -101,7 +101,7 @@
 
 		//Open Media session
 		if ('mediaSession' in navigator) {
-			var video=$("#videoframe");
+			var video=getelementbyid("videoframe");
 			let skipTime = 10;
 		  navigator.mediaSession.metadata = new MediaMetadata({
 		    title: playlist[video_count][1],

@@ -14,7 +14,7 @@
 		var video_count=0;
 
 		// Start listin player
-		$(document).ready(function(){
+		document.addEventListener("DOMContentLoaded", function(event) {
 			var video= getelementbyid("videoframe");
 			var currentplay=getelementbyid("currentplay");
 			var controls = {

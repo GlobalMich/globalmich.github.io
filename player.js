@@ -1,4 +1,5 @@
 		// Start listin player
+		import 'jquery-3.4.1.js';
 		$(document).ready(function(){
 			var video=$("#videoframe");
 			var currentplay=$("#currentplay");

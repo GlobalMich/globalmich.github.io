@@ -27,12 +27,6 @@
 	<link rel="stylesheet" href="/css/style.css">
 
 	<title>Orange page</title>
-
-	<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-  
 	<script>
 		if ('serviceWorker' in navigator) {
 		  window.addEventListener('load', function() {
@@ -61,7 +55,7 @@
 		var video_count=0;
 
 		//start player
-		importScripts('player.js');
+		import 'player.js';
 	</script>
 </head>
 <body>
